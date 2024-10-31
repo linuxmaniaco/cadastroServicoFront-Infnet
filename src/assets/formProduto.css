@@ -1,0 +1,92 @@
+/* ProductForm.css */
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ddcab8;
+    border-radius: 12px;
+    color: #000000;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 25px;
+    color: #020202;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+    width: 350px;
+    text-align: left;
+  }
+  
+  .field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  .field input,
+  .field textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: #fff;
+    color: #000000;
+  }
+
+  .fieldinput {
+    background-color: #fff;
+  }
+  
+  /* Impede o redimensionamento horizontal do textarea */
+  .field textarea {
+    width: 100%;
+    resize: vertical; /* Permite redimensionar apenas para cima ou para baixo */
+  }
+  
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-submit,
+  .btn-cancel {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #d0d0d0;
+  }

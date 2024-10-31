@@ -1,0 +1,132 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+header .fotoPerfil {
+    width: 160px; 
+    height: 160px;
+    border-radius: 100px;
+}
+
+header .Logo {
+  display: flex;
+  flex-direction: column;
+}
+
+header fieldset {
+  width: 175px;
+  height: 175px;
+  margin: 10px;
+}
+
+header fieldset {
+  border-radius: 15px;
+}
+
+.menu {
+  background-color: #4f4f4f;
+  font-weight: 1000;
+  border-radius: 5px;
+}
+
+.menu ul li a {
+  color: #ffffff;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+body {
+    background-color: #222222;
+}
+
+/* .container {
+    background-color: #222222;
+    width: 1000px;
+} */
+
+.servicos {
+  overflow: auto;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.servicos table {
+  border: 1px solid #dededf;
+  height: 100%;
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: left;
+  
+}
+
+.servicos caption {
+  caption-side: top;
+  text-align: left;
+}
+
+.servicos th {
+  border: 1px solid #dededf;
+  background-color: #4f4f4f;
+  color: #f8f8f7;
+  padding: 5px;
+}
+
+.servicos td {
+  border: 1px solid #000000;
+  background-color: #ddcab8;
+  color: #000000;
+  padding: 5px;
+  text-align: center;
+}
+
+
+
+.btn {
+  border: none;
+  padding: 4px;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+.btn-editar {
+  background-color: #f5d522;
+  cursor: pointer;
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+  cursor: pointer;
+}
+
+
+footer {
+    background-color: #4f4f4f;
+}
+
+.topo {
+  background-color: #666;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.topo button {
+  background-color: #219ebc;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
