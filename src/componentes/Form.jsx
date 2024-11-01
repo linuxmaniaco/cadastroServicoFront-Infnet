@@ -1,34 +1,42 @@
-import React from 'react';
+import React, { act } from 'react';
 import { useState } from 'react'
 import '../assets/formProduto.css'
-import { cadastroProdutoApi } from '../service/Api';
+import { cadastroProdutoApi, editProdutoApi } from '../service/Api';
 
-function Form() {
-  const [form, setForm] = useState({});
-  console.log(form)
+function Form({form, setForm, update}) {
+  
+  console.log('FORM DE EDIÇÃO', form)
 
   const setChange = (field, value) =>
-    setForm({
-      ...form,
+    setForm((prevForm) => ({
+      ...prevForm,
       [field]: value,
       
-    });
+    }));
     
 
   const submit = async () => {
     console.log(form)
     try {
-        await cadastroProdutoApi(form);
-        alert('Cadastro do usuário ${form.name} feito com sucesso')
+      const action = update ? editProdutoApi : cadastroProdutoApi;
+      
+      await action(form);
+      alert('${update ? "Atualização" : "Cadastro"} do produto ${form.name} feito com sucesso')
         
     } catch {
         throw new Error("Não foi possível cadastrar")
     }
   }
 
+  const updateProduto = (id, value) => {
+    editProdutoApi(value.id, value).then(() => {
+      alert('Produto ' + {valuename} + ' atualizado com sucesso.' )
+      setShowList(!setShowList);
+    });
+  }
+
   return (
     <div className="form-container">
-      {JSON.stringify(form)}
       <h2>Registrar / Editar Produtos</h2>
       <form>
         <div className="field">

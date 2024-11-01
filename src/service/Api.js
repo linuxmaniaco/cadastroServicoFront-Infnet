@@ -24,3 +24,11 @@ export async function cadastroProdutoApi(form) {
     }
 }
 
+export async function editProdutoApi(form) {
+    try{
+        await http.patch(`/produto/${form.id}`, form);
+    } catch {
+        throw new Error("Não foi possível atualizar o produto");
+    }
+}
+

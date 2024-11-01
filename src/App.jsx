@@ -15,6 +15,8 @@ import './assets/styleGlobal.css';
 function App() {
   const [listas, setProdutos] = useState([])
   const [showList, setShowList] = useState(true); 
+  const [form, setForm] = useState({});
+  const [update, setUpdate] = useState(false);
 
   // Deletar produtos
   const deleteProduto = async (id) => {
@@ -35,15 +37,23 @@ function App() {
 
    // Ciclo de vida do componente
   useEffect(() => {
-    // (async () =>{
-    //   //Usando o iife
-    // })();
     getProduto();
   }, []);
 
-  const editForm = (value) => {
-    console.log(value)
+  const cadastro = (value) => {
+    setShowList(value)
+    setUpdate(false)
   }
+
+  const editForm = (value) => {
+    console.log('Dados do VALUE', value)
+    setForm(value)
+    console.log('####', value.id)
+    setShowList(false)
+    setUpdate(true);
+  }
+
+  
 
  console.log("MUDANÇA NO USER_EFFECT",listas)
 
@@ -52,9 +62,12 @@ function App() {
       <Cabecalho />
       <Menu />
       <Body>
-        <MenuProduto show={showList} act={setShowList} />
-        {showList ? <Produtos produtos={listas} deleteProduto={deleteProduto} editForm={editForm} />  : <Form />}
-        {/* {console.log("PASSANDO LISTA",listas)} */}
+        <MenuProduto show={showList} act={cadastro} />
+        {showList ? (
+          <Produtos produtos={listas} deleteProduto={deleteProduto} editForm={editForm} /> 
+        ) : ( 
+          <Form form={form} setForm={setForm} update={update}/>
+        )}
       </Body>
       <Rodape />
     </Container>
