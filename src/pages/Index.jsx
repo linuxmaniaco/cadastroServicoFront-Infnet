@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react'
-import { getProdutoApi } from './service/Api';
-import { deleteProdutosApi } from "./service/Api";
-import Container from './componentes/Container'
-import Cabecalho from './componentes/Cabecalho'
-import Menu from './componentes/Menu'
-import Body from './componentes/Body'
-import Rodape from './componentes/Rodape'
-import Produtos from './componentes/Produtos'
-import Form from './componentes/Form';
-import MenuProduto from './componentes/Menu/MenuProduto';
-import './App.css'
-import './assets/styleGlobal.css';
+import { getProdutoApi } from '../service/Api';
+import { deleteProdutosApi } from "../service/Api";
+import Container from '../componentes/Container'
+import Cabecalho from '../componentes/Cabecalho'
+import Menu from '../componentes/Menu'
+import Body from '../componentes/Body'
+import Rodape from '../componentes/Rodape'
+import Produtos from '../componentes/Produtos'
+import Form from '../componentes/Form';
+import MenuProduto from '../componentes/Menu/MenuProduto';
+import '../App.css'
+import '../assets/styleGlobal.css';
 
-function App() {
+function Initial() {
   const [listas, setProdutos] = useState([])
   const [showList, setShowList] = useState(true); 
   const [form, setForm] = useState({});
   const [update, setUpdate] = useState(false);
+
 
   // Deletar produtos
   const deleteProduto = async (id) => {
@@ -58,7 +59,7 @@ function App() {
  console.log("MUDANÇA NO USER_EFFECT",listas)
 
   return (
-    <Container>
+    <>
       <Cabecalho />
       <Menu />
       <Body>
@@ -70,8 +71,8 @@ function App() {
         )}
       </Body>
       <Rodape />
-    </Container>
+    </>
   )
 }
 
-export default App
+export default Initial
