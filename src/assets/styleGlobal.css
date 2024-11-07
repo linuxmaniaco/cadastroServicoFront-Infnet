@@ -32,17 +32,43 @@ header fieldset {
   border-radius: 5px;
 }
 
+.menu a.active{
+  background-color: #ffa631;
+  color: #fff;
+}
+
 .menu ul li a {
   color: #ffffff;
 }
 
-.menu ul {
+.nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: space-around;
   gap: 10px;
 }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  padding: 8px;
+  background-color: #f4f4f4;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  padding: 2px 16px;
+  background-color: #fff;
+  border: 2px solid #ffa631;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
 
 body {
     background-color: #222222;
@@ -66,13 +92,13 @@ body {
   table-layout: auto;
   border-collapse: collapse;
   border-spacing: 1px;
-  text-align: left;
+  text-align: center;
   
 }
 
 .servicos caption {
   caption-side: top;
-  text-align: left;
+  text-align: center;
 }
 
 .servicos th {

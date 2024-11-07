@@ -64,10 +64,10 @@
   "produto": [
     {
       "id": "6",
-      "nome": "Mouse Óptico",
+      "nome": "Mouse Ópticos",
       "descricao": "Mouse óptico com fio, conexão USB",
-      "preco": 20,
-      "estoque": 40
+      "preco": "25",
+      "estoque": "200"
     },
     {
       "id": "7",
@@ -130,14 +130,84 @@
       "nome": "Super Nintendo",
       "descricao": "Video Game 16bit da Nintendo",
       "preco": "600",
-      "estoque": "20"
+      "estoque": "30"
     },
     {
       "id": "437f",
       "nome": "Jogo Mario Kart Snes",
       "descricao": "Cartucho de vídeo Mario Kart.",
       "preco": "20",
+      "estoque": "21"
+    },
+    {
+      "id": "b733",
+      "nome": "controle xbox",
+      "descricao": "Controle xbox sem fio",
+      "preco": "50",
+      "estoque": "10"
+    },
+    {
+      "id": "828e",
+      "nome": "Controle ps5 ",
+      "descricao": "Controle ps5 original sem fio",
+      "preco": "400",
       "estoque": "20"
+    },
+    {
+      "id": "a019",
+      "nome": "Produto novo",
+      "descricao": "Novo produto cadastrado",
+      "preco": "50",
+      "estoque": "50"
+    },
+    {
+      "id": "ea94",
+      "nome": "TV 32 pol LG",
+      "descricao": "TV Led 32 polegadas LG ",
+      "preco": "50",
+      "estoque": "10"
+    },
+    {
+      "id": "0542",
+      "nome": "Placa de vídeo RX6900XT",
+      "descricao": "Placa de video AMDR X6900XT 16gb ram.",
+      "preco": "5000",
+      "estoque": "10"
+    },
+    {
+      "id": "8133",
+      "nome": "HeadSet Warrior",
+      "descricao": "HeadSer Warrior omnidirecional",
+      "preco": "200",
+      "estoque": "10"
+    },
+    {
+      "id": "0454",
+      "nome": "Cadeira Gamer Warrior",
+      "descricao": "Cadeira Gamer Warrior Verde inclinavel",
+      "preco": "600",
+      "estoque": "10"
+    },
+    {
+      "id": "7bcf",
+      "nome": "Cabo HDMI",
+      "descricao": "CAbo HDMI",
+      "preco": "10",
+      "estoque": "1"
+    },
+    {
+      "id": "e875",
+      "nome": "Mouse pad",
+      "descricao": "Mouse pad preto pequeno",
+      "preco": "1",
+      "estoque": "1"
+    },
+    {
+      "id": "621c",
+      "nome": "Cabo display port",
+      "descricao": "Cabo display port 2 metros",
+      "preco": "30",
+      "estoque": "10"
     }
   ]
 }

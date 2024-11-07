@@ -11,6 +11,7 @@ export async function getProdutoApi(){
 export async function deleteProdutosApi(id) {
     try{
         await http.delete(`/produto/${id}`);
+        console.log("Produto deletado com sucesso!")
     } catch {
         throw new Error("Não foi possível deletar");
     }
@@ -29,6 +30,15 @@ export async function editProdutoApi(form) {
         await http.patch(`/produto/${form.id}`, form);
     } catch {
         throw new Error("Não foi possível atualizar o produto");
+    }
+}
+
+export async function detalhesProdutoApi(id) {
+    try{
+        console.log("DEBUG 2 DENTRO DA API", id)
+        return await http.get(`/produto/${id}`);
+    } catch {
+        throw new Error("Não foi possível exibir detalhes do produto");
     }
 }
 

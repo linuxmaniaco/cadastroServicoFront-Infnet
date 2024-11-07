@@ -1,54 +1,72 @@
 import React from "react";
-// import { FaListUl } from "react-icons/fa";
-// import { PiPlus } from "react-icons/pi";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import '../assets/styleGlobal.css';
+
 
 function Menu() {
    return (
-        <div className='menu'>
-            <ul>
-                <li>
-                    <a href='#'>Produtos</a>
-                </li>
-                <li>
-                    <a href='#'>PEDIDOS</a>
-                </li>
-                <li>
-                    <a href='#'>RELATÓRIOS</a>
-                </li>
-                <li>
-                    <a href='#'>ADMIN</a>
-                </li>
-                <li>
-                    <a href='#'>SAIR</a>
-                </li>
-            </ul>
-        </div> 
+        <nav className="menu">
+
+            <NavLink
+                to="/home"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                }
+                >
+                HOME
+            </NavLink>
+
+            <NavLink
+                to="/produtos"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                }
+                >
+                PRODUTOS
+            </NavLink>
+
+            <NavLink
+                to="/cadastro"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                }
+                >
+                CADASTRAR
+            </NavLink>
+
+            <NavLink
+                to="/relatorio"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                }
+                >
+                RELATÓRIOS
+            </NavLink>
+
+            <NavLink
+                to="/admin"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                }
+                >
+                ADMIN
+            </NavLink>
+            
+            {/* <Link className="nav" to="/teste">ADMIN</Link> */}
+
+            <NavLink
+                to="/sair"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                }
+                >
+                SAIR
+            </NavLink>
+
+            {/* <Link className="nav" to="/teste">SAIR</Link> */}
+        </nav>
    )
 }
 
 export default Menu;
-
-// import React from "react";
-// import { FaListUl } from "react-icons/fa";
-// import { PiPlus } from "react-icons/pi";
-
-// function Menu({ show, act }) {
-//    return (
-//         <div className='menu'>
-//           <ul>
-//                 <li>
-//                     <button onClick={() => act(!show)} className="topo"> 
-//                         {show ? <PiPlus /> : <FaListUl />}
-//                         {show ? 'Cadastro' : 'Produto'}
-//                     </button>
-//                 </li>
-//               <li><a href='#'>PEDIDOS</a></li>
-//               <li><a href='#'>RELATÓRIOS</a></li>
-//               <li><a href='#'>ADMIN</a></li>
-//               <li><a href='#'>SAIR</a></li>
-//           </ul>
-//         </div> 
-//    )
-// }
-
-// export default Menu;

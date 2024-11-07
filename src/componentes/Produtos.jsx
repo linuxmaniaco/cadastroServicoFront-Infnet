@@ -1,10 +1,12 @@
 import React from "react";
 import { colunas } from "../config/colunas-produto";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 
 function Produtos({produtos, deleteProduto, editForm}){
-    {console.log("LISTA EM PRODUTOS ", produtos)}
+    const navegate = useNavigate();
+    // {console.log("LISTA EM PRODUTOS ", produtos)}
 
     return (
         <>
@@ -29,7 +31,8 @@ function Produtos({produtos, deleteProduto, editForm}){
                             <td>{item.descricao}</td>
                             <td>{item.preco}</td>
                             <td>{item.estoque}</td>
-                            <td><button onClick={() => editForm(item)} className='btn btn-editar'><FaEdit /></button></td>
+                            <td><button onClick={() => navegate('/detalhes/'+item.id)} className='btn btn-editar'><FaEdit /></button></td>
+                            {console.log("ITEM PAR ALTERAR", item.id)}
                             {/* <td><button href='#' className='btn btn-excluir'>Excluir</button></td> */}
                             <td><button onClick={() => deleteProduto(item.id)} className='btn btn-excluir'><FaTrash /></button></td>
                         </tr>
