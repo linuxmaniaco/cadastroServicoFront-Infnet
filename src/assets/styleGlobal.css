@@ -110,12 +110,20 @@ body {
 
 .servicos td {
   border: 1px solid #000000;
-  background-color: #ddcab8;
+  /* background-color: #ddcab8; */
   color: #000000;
   padding: 5px;
   text-align: center;
 }
 
+
+.linha-par {
+  background-color: #ddcab8; /* Cor para linhas pares */
+}
+
+.linha-impar {
+  background-color: #ffffff; /* Cor para linhas ímpares */
+}
 
 
 .btn {
