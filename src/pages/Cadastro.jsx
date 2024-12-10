@@ -19,7 +19,7 @@ function Cadastro() {
         const confirmCadastro = window.confirm("Tem certeza de que deseja cadastrar este produto?");
   
         if (!confirmCadastro) {
-        return; // Cancela a cadastro se o usuário não confirmar
+        return; // Cancela a cadastro se o usuário não confirmar o cencelamento
         }
         try {
             console.log('Debugando cadastroProduto', form)
